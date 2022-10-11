@@ -21,7 +21,7 @@ fs
         fs.mkdirSync(`${output}/${data.id}`);
       }
 
-      fs.writeFileSync(`${output}/${data.id}/data.json`, JSON.stringify(data));
+      fs.writeFileSync(`${output}/${data.id}/data.json`, JSON.stringify({ ...data, id: undefined }));
     } catch (error) {
       // console.error(error);
     }
